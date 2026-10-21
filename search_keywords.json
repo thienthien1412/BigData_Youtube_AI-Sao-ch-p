@@ -1,0 +1,47 @@
+
+{
+  "search_queries": {
+    "ai_cover": [
+      "\"AI cover\"",
+      "\"AI cover tiếng Việt\"",
+      "\"AI cover nhạc Việt\"",
+      "\"cover bằng giọng AI\"",
+      "\"giọng AI cover\"",
+      "\"AI voice cover\"",
+      "\"AI vocal cover\"",
+      "\"cover giọng AI\""
+    ],
+    "ai_original": [
+      "\"bài hát do AI tạo\"",
+      "\"nhạc được tạo bằng AI\"",
+      "\"bài hát sáng tác bằng AI\"",
+      "\"bài hát tạo bằng Suno\"",
+      "\"Suno AI original song\"",
+      "\"made with Suno\"",
+      "\"Udio AI original song\"",
+      "\"AI-generated music Vietnamese\"",
+      "\"AI generated song Vietnamese\"",
+      "\"AI music Vietnam\""
+    ]
+  },
+  "video_types": [
+    "ai_cover",
+    "ai_original",
+    "both",
+    "uncertain"
+  ],
+  "review_statuses": [
+    "review",
+    "keep",
+    "exclude"
+  ],
+  "approval_rules": {
+    "require_manual_review": true,
+    "require_ai_evidence": true,
+    "allow_uncertain_video": false,
+    "collect_comments_only_if_status_keep": true,
+    "allow_title_without_ai_keyword_if_verified": true
+  },
+  "search_enabled": false,
+  "data_collection_enabled": false
+}

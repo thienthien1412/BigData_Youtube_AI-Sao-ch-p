@@ -1,0 +1,103 @@
+﻿{
+  "eligible_content": {
+    "ai_cover": {
+      "description": "Video có bài nhạc hoặc phần trình diễn thực tế, trong đó AI được sử dụng để tạo hoặc mô phỏng giọng hát cover một ca khúc.",
+      "required_evidence": [
+        "Có nội dung âm nhạc thực tế trong video.",
+        "Có bằng chứng cụ thể cho thấy AI được sử dụng để tạo hoặc mô phỏng giọng hát.",
+        "Bằng chứng phải liên quan đến phần âm nhạc hoặc giọng hát, không chỉ liên quan đến hình ảnh hay tiêu đề."
+      ],
+      "acceptable_evidence_examples": [
+        "Mô tả video xác nhận sử dụng AI để cover hoặc chuyển đổi giọng hát.",
+        "Thông tin từ người đăng hoặc nguồn đáng tin cậy xác nhận việc sử dụng AI cho giọng hát.",
+        "Nguồn công khai khác có thể kiểm tra và liên kết trực tiếp với video."
+      ]
+    },
+    "ai_original": {
+      "description": "Video có bài nhạc gốc được tạo ra với sự hỗ trợ của AI trong quá trình sáng tác, tạo giai điệu, giọng hát hoặc sản xuất âm nhạc.",
+      "required_evidence": [
+        "Có nội dung âm nhạc thực tế trong video.",
+        "Có bằng chứng cụ thể về việc sử dụng AI trong quá trình tạo bài nhạc.",
+        "Không chỉ dựa vào việc video sử dụng ảnh AI, hình ảnh AI hoặc có nhắc đến công cụ AI."
+      ],
+      "acceptable_evidence_examples": [
+        "Người tạo xác nhận bài nhạc được tạo bằng công cụ AI.",
+        "Mô tả hoặc nguồn công khai đáng tin cậy xác nhận quy trình tạo nhạc bằng AI.",
+        "Nguồn có thể kiểm tra và liên kết trực tiếp với bài nhạc."
+      ]
+    }
+  },
+  "exclude_content": [
+    "Video hướng dẫn sử dụng công cụ AI nhưng không có bài nhạc thuộc phạm vi nghiên cứu.",
+    "Video quảng cáo hoặc giới thiệu công cụ AI nhưng không có bài nhạc thuộc phạm vi nghiên cứu.",
+    "Video tin tức, bình luận hoặc thảo luận về AI nhưng không có bài nhạc thuộc phạm vi nghiên cứu.",
+    "Video nhạc thông thường không có bằng chứng sử dụng AI.",
+    "Video chỉ dùng AI tạo hình ảnh, ảnh bìa hoặc video minh họa mà không có bằng chứng AI tham gia tạo nhạc hoặc giọng hát.",
+    "Video không có nội dung âm nhạc thực tế thuộc phạm vi nghiên cứu.",
+    "Video trùng lặp theo video_id đã được ghi nhận."
+  ],
+  "review_policy": {
+    "default_status": "review",
+    "allowed_statuses": [
+      "review",
+      "keep",
+      "exclude"
+    ],
+    "allowed_video_types": [
+      "ai_cover",
+      "ai_original",
+      "both",
+      "uncertain"
+    ],
+    "uncertain_can_be_kept": false,
+    "manual_review_required": true,
+    "evidence_required_for_keep": true,
+    "evidence_source_required_for_keep": true,
+    "evidence_note_required_for_keep": true,
+    "both_requires_evidence_for_both_groups": true,
+    "title_or_keyword_alone_is_sufficient_evidence": false,
+    "comments_allowed_only_for_keep": true,
+    "comments_require_current_approval": true,
+    "collect_replies": false,
+    "preserve_existing_data_after_exclusion": true,
+    "record_review_history": true,
+    "deduplicate_videos_by": "video_id",
+    "deduplicate_comments_by": "comment_id"
+  },
+  "evidence_record": {
+    "required_fields_for_keep": [
+      "evidence_type",
+      "evidence_source",
+      "evidence_note",
+      "review_status",
+      "reviewed_at",
+      "reviewer"
+    ],
+    "evidence_source_description": "URL hoặc nguồn công khai cụ thể có thể kiểm tra.",
+    "evidence_note_description": "Ghi rõ chi tiết nào trong nguồn chứng minh việc sử dụng AI để tạo giọng hát hoặc tạo nhạc.",
+    "insufficient_evidence_action": "review"
+  },
+  "review_history": {
+    "record_status_changes": true,
+    "required_fields": [
+      "video_id",
+      "previous_status",
+      "new_status",
+      "changed_at",
+      "reviewer",
+      "reason"
+    ],
+    "delete_existing_data_on_exclusion": false
+  },
+  "collection_policy": {
+    "collection_enabled": false,
+    "search_enabled": false,
+    "require_manual_approval": true,
+    "collect_comments_for_unapproved_videos": false,
+    "collect_comments_only_if_current_status_is_keep": true,
+    "require_valid_evidence_before_comments": true,
+    "collect_replies": false,
+    "max_top_level_comments_per_video": 200
+  },
+  "collection_enabled": false
+}

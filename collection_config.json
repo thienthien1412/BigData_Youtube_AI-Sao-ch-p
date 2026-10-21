@@ -1,0 +1,16 @@
+{
+  "project_name": "youtube_ai_music_analysis",
+  "start_date": "2024-01-01",
+  "video_groups": [
+    "ai_cover",
+    "ai_original"
+  ],
+  "collection_status_default": "review",
+  "require_manual_approval": true,
+  "collect_comments_for_unapproved_videos": false,
+  "collect_replies": false,
+  "max_top_level_comments_per_video": 200,
+  "search_region_code": "VN",
+  "search_relevance_language": "vi",
+  "data_collection_enabled": false
+}

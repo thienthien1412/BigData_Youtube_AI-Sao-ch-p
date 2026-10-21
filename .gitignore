@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local data and state
+data/
+logs/
+*.bak
+backfill_state.json
+recheck_state.json
+
+# Local development
+.vscode/
+.DS_Store
+Thumbs.db
