@@ -228,6 +228,24 @@ def kiem_tra_collection_config(config):
         "Moc thoi gian bat dau dung."
     )
 
+    kiem_tra_bat_buoc(
+        config,
+        "end_date",
+        "2026-10-22",
+        "Moc thoi gian ket thuc dung."
+    )
+
+    try:
+        from datetime import date
+        ngay_bat_dau = date.fromisoformat(config.get("start_date", ""))
+        ngay_ket_thuc = date.fromisoformat(config.get("end_date", ""))
+
+        if ngay_ket_thuc >= ngay_bat_dau:
+            in_ok("Khoang thoi gian thu thap hop le.")
+        else:
+            in_loi("end_date khong duoc truoc start_date.")
+    except (TypeError, ValueError):
+        in_loi("start_date/end_date phai dung dinh dang YYYY-MM-DD.")
     kiem_tra_danh_sach(
         config,
         "video_groups",

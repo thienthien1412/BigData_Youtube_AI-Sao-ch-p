@@ -20,3 +20,7 @@ recheck_state.json
 .vscode/
 .DS_Store
 Thumbs.db
+# Additional local environments and backups
+.venv_spark/
+backup_before_config_fix/
+*.bak*
